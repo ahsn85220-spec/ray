@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أحمد حسن · السيرة الذاتية (تصميم بطول كامل)</title>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: مزيج قوي وعصري -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&family=Montserrat:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #0a0c12;  /* أسود كحلي عميق */
+      font-family: 'Cairo', 'Montserrat', sans-serif;
+      color: #eef4ff;
+      line-height: 1.6;
+      direction: rtl;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* الحاوية الرئيسية تمتد بطول كامل */
+    .container {
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 30px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* شريط الأنوار العلوي */
+    .top-bar {
+      height: 6px;
+      background: linear-gradient(90deg, #0038b8, #0066ff, #0a0c12, #0038b8);
+      box-shadow: 0 0 20px #0066ff;
+      margin-bottom: 30px;
+      border-radius: 0 0 10px 10px;
+      width: 100%;
+    }
+
+    /* ===== الهيدر المعدل: بدون صورة شخصية، البومة بجوار الاسم ===== */
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      background: #0f131a;
+      padding: 30px 40px;
+      border-radius: 40px 40px 40px 40px;
+      border: 1px solid #1e2a3a;
+      box-shadow: 0 20px 35px -8px rgba(0, 102, 255, 0.4), inset 0 1px 2px rgba(255,255,255,0.05);
+      margin-bottom: 40px;
+      width: 100%;
+    }
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    /* شعار البومة بجوار الاسم */
+    .owl-logo {
+      background: #0f1a2f;
+      width: 85px;
+      height: 85px;
+      border-radius: 30px 10px 30px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.8rem;
+      color: #3d9cff;
+      text-shadow: 0 0 20px #3d9cff, 0 0 40px #0066ff;
+      border: 2px solid #0066ff;
+      transform: rotate(2deg);
+      box-shadow: 0 10px 25px #00000080;
+    }
+
+    .owl-logo i {
+      filter: drop-shadow(0 0 8px cyan);
+    }
+
+    .name-title h1 {
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffffff, #90caff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      font-family: 'Montserrat', 'Cairo', sans-serif;
+    }
+
+    .name-title .sub {
+      font-size: 1.2rem;
+      color: #b0d4ff;
+      background: #001e3b;
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 40px;
+      border-right: 5px solid #0066ff;
+      font-weight: 600;
+      box-shadow: 0 0 12px #0066ff66;
+    }
+
+    .contact-header {
+      text-align: left;
+      z-index: 2;
+    }
+
+    .contact-header a, .contact-header span {
+      display: inline-block;
+      color: white;
+      background: #0d1624;
+      padding: 12px 22px;
+      margin: 0 5px;
+      border-radius: 60px;
+      border: 1px solid #1e4979;
+      font-size: 1.1rem;
+      font-weight: 600;
+      box-shadow: 0 10px 15px -5px #000000;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .contact-header a:hover {
+      background: #0066ff;
+      border-color: white;
+      transform: scale(1.08);
+      box-shadow: 0 0 30px #0066ff;
+    }
+
+    .contact-header i {
+      margin-left: 8px;
+      color: #67b3ff;
+    }
+
+    /* ===== راي للتعليم – بانر علوي بارز ===== */
+    .ray-banner {
+      background: linear-gradient(105deg, #000d1f 0%, #001d3d 100%);
+      border-radius: 70px 20px 70px 20px;
+      padding: 35px 35px;
+      margin-bottom: 45px;
+      border: 1px solid #0066ff;
+      box-shadow: 0 0 40px #0066ff33, inset 0 0 20px #001e3b;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .ray-text h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      text-shadow: 0 0 10px #0066ff;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .ray-text h2 i {
+      color: #ffd966;
+      margin-left: 15px;
+    }
+
+    .ray-text p {
+      font-size: 1.4rem;
+      color: #cce3ff;
+    }
+
+    .ray-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .ray-btn {
+      background: #0b1b30;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      border: 2px solid #2d7eff;
+      transition: 0.3s;
+      box-shadow: 0 0 25px #0066ff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ray-btn i {
+      font-size: 2rem;
+      color: #5faaff;
+    }
+
+    .ray-btn:hover {
+      background: #0066ff;
+      border-color: white;
+      box-shadow: 0 0 45px #3d9cff;
+      transform: translateY(-4px);
+    }
+
+    /* ===== شبكة بطول كامل (عمودي) ===== */
+    .full-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      width: 100%;
+    }
+
+    /* بطاقات عريضة */
+    .card {
+      background: #0f1825;
+      border-radius: 40px 10px 40px 10px;
+      padding: 35px 40px;
+      border: 1px solid #142b44;
+      box-shadow: 15px 15px 30px #010101, -5px -5px 15px #142e4a33;
+      transition: 0.2s;
+      width: 100%;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 30px #0066ff55, 15px 15px 30px #000000;
+    }
+
+    .card-title {
+      font-size: 2.3rem;
+      font-weight: 800;
+      border-bottom: 4px solid #0066ff;
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: #c1dcff;
+    }
+
+    .card-title i {
+      color: #0066ff;
+      font-size: 2.5rem;
+      text-shadow: 0 0 15px #0066ff;
+    }
+
+    /* راي للتعليم (مكرر داخل المحتوى لكن نضعه كعنوان) */
+    .edu-box {
+      background: #112236;
+      border-radius: 30px;
+      padding: 20px 30px;
+      margin: 20px 0;
+      font-size: 1.4rem;
+      border-right: 7px solid #0066ff;
+    }
+
+    .about-text {
+      font-size: 1.3rem;
+      color: #d0e2ff;
+      line-height: 2;
+      background: #0e1b2b;
+      padding: 30px;
+      border-radius: 35px 10px 35px 10px;
+      border: 1px solid #234875;
+    }
+
+    .skills-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .skill-item {
+      background: #001e47;
+      padding: 12px 35px;
+      border-radius: 60px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      border: 1px solid #2d7eff;
+      box-shadow: 0 0 15px #0044cc;
+      transition: 0.1s;
+    }
+
+    .skill-item:hover {
+      background: #0066ff;
+      box-shadow: 0 0 35px #0099ff;
+    }
+
+    .telegram-link {
+      display: inline-block;
+      background: #0088cc;
+      padding: 12px 40px;
+      border-radius: 60px;
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid white;
+      box-shadow: 0 0 25px #00a6ff;
+      margin-top: 25px;
+      font-size: 1.4rem;
+    }
+
+    /* قسم القنوات السفلي */
+    .channels-section {
+      background: #0c1420;
+      border-radius: 70px 20px 70px 20px;
+      padding: 40px 50px;
+      margin-top: 35px;
+      border: 2px solid #003b88;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .channels-section h2 {
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .footer-links a {
+      color: white;
+      font-size: 1.9rem;
+      margin: 0 20px;
+      background: #002966;
+      width: 85px;
+      height: 85px;
+      display: inline-flex;
+      border-radius: 30px 10px 30px 10px;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      border: 2px solid #3d9cff;
+      transition: 0.3s;
+      box-shadow: 0 0 35px #0066ff;
+    }
+
+    .footer-links a:hover {
+      background: #0066ff;
+      transform: scale(1.15) rotate(3deg);
+      border-color: white;
+    }
+
+    .footer-note {
+      text-align: center;
+      margin: 50px 0 20px;
+      color: #5e7a9c;
+      font-size: 1.3rem;
+      border-top: 1px solid #1b3855;
+      padding-top: 30px;
+      width: 100%;
+    }
+
+    /* حذف أي أثر للصورة الشخصية */
+    .profile-pic {
+      display: none;
+    }
+
+    /* استجابة كاملة */
+    @media (max-width: 900px) {
+      .header { flex-direction: column; text-align: center; gap: 20px; }
+      .contact-header { margin-top: 10px; }
+      .ray-banner { flex-direction: column; gap: 25px; }
+      .channels-section { flex-direction: column; gap: 20px; }
+      .card { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+<div class="top-bar"></div>
+<div class="container">
+
+  <!-- ===== الهيدر الجديد: بدون صورة شخصية، البومة بجوار الاسم ===== -->
+  <div class="header">
+    <div class="profile-info">
+      <!-- شعار البومة بجوار الاسم -->
+      <div class="owl-logo">
+        <i class="fas fa-owl"></i>
+      </div>
+      <div class="name-title">
+        <h1>أحمد حسن</h1>
+        <span class="sub"><i class="fas fa-graduation-cap" style="margin-left: 8px;"></i>مهندس أمن سيبراني</span>
+      </div>
+    </div>
+    <div class="contact-header">
+      <a href="tel:07823326989"><i class="fas fa-phone-alt"></i> 0782 332 6989</a>
+      <a href="mailto:ahsn85220@gmail.com"><i class="fas fa-envelope"></i> ahsn85220</a>
+      <span><i class="fas fa-map-marker-alt"></i> ديالى، العراق</span>
+    </div>
+  </div>
+
+  <!-- ===== راي للتعليم – بانر رئيسي (رابط lI0Il0II + scientific_2024) ===== -->
+  <div class="ray-banner">
+    <div class="ray-text">
+      <h2><i class="fas fa-bolt"></i> راي للتعليم</h2>
+      <p>مشروع وعربي .. منارة لكل طالب</p>
+    </div>
+    <div class="ray-links">
+      <a href="https://t.me/lI0Il0II" class="ray-btn" target="_blank"><i class="fab fa-telegram"></i> @lI0Il0II</a>
+      <a href="https://t.me/scientific_2024" class="ray-btn" target="_blank"><i class="fab fa-telegram-plane"></i> scientific_2024</a>
+    </div>
+  </div>
+
+  <!-- ===== المحتوى الرئيسي بطول كامل (بدون خبرات مهنية) ===== -->
+  <div class="full-grid">
+
+    <!-- بطاقة: نبذة عني + راي للتعليم (وصف مختصر) -->
+    <div class="card">
+      <div class="card-title"><i class="fas fa-user-astronaut"></i> نبذة عني</div>
+      <div class="about-text">
+        <i class="fas fa-quote-right" style="font-size:2.2rem; color:#0066ff; opacity:0.8; margin-left:10px;"></i>
+        مؤسس حمل في فكرة الإيمان بأن التعليم ليس مادة تدرس، بل رسالة تبني بها العقول وتنتهي بها الأوطان. جمع بين خبرته الأكاديمية ورؤيته الإنسانية ليحول المعرفة إلى صدقة جارية تحمل لكل طالب يبحث عن نور الفهم، ولمن ضاقت به السبل ولم يجد من يعينه في طريق العلم. بيقين من الكلمة الصادقة والمعلومة الصحيحة أدركنا أن نغير مصير طالب، وأن بناء جيل متعلم هو أعظم ما يقدمه الإنسان لمجتمع.
+      </div>
+    </div>
+
+    <!-- بطاقة: التعليم + المهارات (بدون أي ذكر للخبرات المهنية) -->
+    <div class="card">
+      <div class="card-title"><i class="fas fa-crown"></i> المؤهلات والقدرات</div>
+      
+      <!-- التعليم -->
+      <div style="margin-bottom: 35px;">
+        <div style="display: flex; gap:15px; align-items: center; font-size:1.9rem; margin-bottom:15px;"><i class="fas fa-university" style="color:#0066ff;"></i> <span style="font-weight:800;">التعليم</span></div>
+        <div class="edu-box">
+          <i class="fas fa-shield-alt" style="color:#00ccff; margin-left:15px;"></i> بكالوريوس هندسة الأمن السيبراني<br>
+          <span style="color:#aac9ff;">جامعة بلاد الرافدين - ديالى</span>
+        </div>
+      </div>
+      <!-- المهارات (كما هي) -->
+      <div>
+        <div style="display: flex; gap:15px; align-items: center; font-size:1.9rem; margin-bottom:20px;"><i class="fas fa-crown" style="color:#0066ff;"></i> <span style="font-weight:800;">المهارات</span></div>
+        <div class="skills-cloud">
+          <span class="skill-item"><i class="fas fa-chart-line"></i> الإدارة</span>
+          <span class="skill-item"><i class="fas fa-eye"></i> الإشراف</span>
+          <span class="skill-item"><i class="fas fa-camera"></i> التصوير الفوتوغرافي</span>
+          <span class="skill-item"><i class="fas fa-paint-brush"></i> تصاميم مميزة</span>
+          <span class="skill-item"><i class="fas fa-video"></i> تصوير مقاطع الفيديو</span>
+          <span class="skill-item"><i class="fas fa-clipboard-list"></i> التخطيط</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- بطاقة: رابط قناة scientific_2024 + نص عن المشروع (مأخوذ من وصف الصورة) -->
+    <div class="card">
+      <div class="card-title"><i class="fas fa-graduation-cap"></i> راي للتعليم</div>
+      <p style="font-size:1.4rem; margin-bottom:25px;">انطلقت هذه القناة كمبادرة تعليمية تهدف إلى خدمة طلبة العراق وتوفير بيئة دراسية متكاملة تجمع أهم الموارد التي يحتاجها الطالب في مرحلة مصيرية من مسيرته الأكاديمية. جاءت فكرة تأسيسها استجابةً للحاجة المتزايدة إلى مصادر موثوقة وسهلة الوصول، تضم محاضرات الخصوصي لكافة المدرسين، والوزاريات، والملازم بصيغة PDF، في مكان واحد منظم.
+
+منذ بدايتها، سعت القناة إلى تسخير التكنولوجيا لخدمة الطلبة، فتم إنشاء بوت راي التعليمي (@f_pb33bot) ليكون مكتبة إلكترونية تحتوي على المحاضرات والملازم بشكل مرتب وسريع الوصول، إضافةً إلى بوت التواصل (@A_TTT47BOT) لتسهيل تواصل الطلبة وإيصال استفساراتهم وملاحظاتهم.
+
+تمثل هذه القناة الخطوة الأولى في مشروع أكبر يهدف إلى دعم الطلبة علميًا وتوفير محتوى تعليمي شامل يسهم في رفع مستواهم الدراسي وتحقيق أفضل النتائج. وما زالت مستمرة في التطوير والتوسع لتكون مرجعًا تعليميًا موثوقًا لكل طالب يسعى للنجاح والتميّز. 🎓:.</p>
+      <div style="background:#001a33; padding:20px; border-radius:30px; display: flex; align-items: center; gap:20px; flex-wrap: wrap;">
+        <i class="fab fa-telegram" style="font-size:3.5rem; color:#3d9cff;"></i>
+        <a href="https://t.me/scientific_2024" style="color:white; font-size:2rem; text-decoration: none; font-weight:bold; direction: ltr;" target="_blank">https://t.me/scientific_2024</a>
+      </div>
+      <!-- رابط ثانوي إضافي -->
+      <div style="margin-top: 25px;">
+        <a href="https://t.me/lI0Il0II" class="telegram-link" target="_blank"><i class="fab fa-telegram-plane" style="margin-left:10px;"></i> القناة الرئيسية: lI0Il0II</a>
+      </div>
+    </div>
+  </div> <!-- نهاية full-grid -->
+
+  <!-- ===== قسم القنوات البارز في الأسفل (البومة مرة أخرى) ===== -->
+  <div class="channels-section">
+    <h2><i class="fas fa-owl" style="color:#3d9cff; text-shadow: 0 0 30px blue;"></i> روابط راي التعليمية</h2>
+    <div class="footer-links">
+      <a href="https://t.me/lI0Il0II" target="_blank" title="راي التعليمية الأساسية"><i class="fab fa-telegram"></i></a>
+      <a href="https://t.me/scientific_2024" target="_blank" title="scientific_2024"><i class="fab fa-telegram-plane"></i></a>
+    </div>
+  </div>
+
+  <!-- ===== الفوتر النهائي ===== -->
+  <div class="footer-note">
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; font-size: 1.4rem; margin-bottom: 30px;">
+      <span><i class="fas fa-phone-alt" style="color:#0066ff;"></i> 0782 332 6989</span>
+      <span><i class="fas fa-envelope" style="color:#0066ff;"></i> ahsn85220@gmail.com</span>
+      <span><i class="fas fa-map-marker-alt" style="color:#0066ff;"></i> Iraq - Diyala</span>
+    </div>
+    <p>© 2025 المهندس أحمد حسن • مؤسس راي للتعليم • <i class="fas fa-owl" style="color:#6aaaff;"></i>
+    <p style="font-size: 1.1rem; opacity:0.7;">التعليم رسالة تبني بها العقول وتنتهي بها الأوطان</p>
+  </div>
+
+</div> <!-- end container -->
+</body>
+</html>
